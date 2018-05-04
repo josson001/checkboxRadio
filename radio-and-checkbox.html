@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style type="text/css">
+	.radios{
+		position: absolute;
+		left: -500px;
+		top: 0;
+	}
+</style>
+</head>
+ 
+<body>
+		<!-- 每组之间name值不能相同，同一个页面的id不能相同，科技用拼接index值或拼接id -->
+		<!-- radio的html结构 -->
+		<p>---------------radio的html结构1--------------</p>
+		<div class="all-radios">
+			<div>
+				<input type="radio" class="radios" name="x" id="input1">
+				<label for="input1" class="label-img">
+					<img src="img/wrong.jpg"  height="50" width="50" alt="">
+					<span>答案 1</span>
+				</label>
+			</div>
+			<div>
+				<input type="radio" class="radios" name="x" id="input4">
+				<label for="input4" class="label-img">
+					<img src="img/wrong.jpg"  height="50" width="50" alt="">
+					<span>答案 1</span>
+				</label>
+			</div>
+			<div>
+				<input type="radio" class="radios" name="x" id="input2">
+				<label for="input2"  class="label-img">
+					<img src="img/wrong.jpg" height="50" width="50" alt="">
+					<span>答案 2</span>
+				</label>
+			</div>
+			<div>
+				<input type="radio" class="radios" name="x" id="input3">
+				<label for="input3" class="label-img">
+					<img src="img/wrong.jpg"  height="50" width="50" alt="">
+					<span>答案3</span>
+				</label>
+			</div>
+		</div>
+		<p>---------------radio的html结构1--------------</p>
+		<div class="all-radios">
+			<div>
+				<input type="radio" class="radios" name="y" id="input12">
+				<label for="input12" class="label-img">
+					<img src="img/wrong.jpg"  height="50" width="50" alt="">
+					<span>答案 1</span>
+				</label>
+			</div>
+			<div>
+				<input type="radio" class="radios" name="y" id="input22">
+				<label for="input22"  class="label-img">
+					<img src="img/wrong.jpg" height="50" width="50" alt="">
+					<span>答案 2</span>
+				</label>
+			</div>
+			<div>
+				<input type="radio" class="radios" name="y" id="input32">
+				<label for="input32" class="label-img">
+					<img src="img/wrong.jpg"  height="50" width="50" alt="">
+					<span>答案3</span>
+				</label>
+			</div>
+		</div>
+		<!-- checkbox的html结构 -->
+		<p>------------checkbox的html结构-----------------</p>
+		<div class="checkbox">
+			<input type="checkbox" class="radios"  id="checkbox1">	
+			<label for="checkbox1" class="label-img">
+				<img src="img/wrong.jpg" height="50" width="50" alt="">
+				<!-- 第一个标签必须是img别的随便 -->
+				<span>第一题</span>
+			</label>	
+		</div>
+		<div class="checkbox">
+			<input type="checkbox" class="radios"  id="checkbox2">	
+			<label for="checkbox2" class="label-img">
+				<img src="img/wrong.jpg" height="50" width="50" alt="">
+				<!-- 第一个标签必须是img别的随便 -->
+				<span>第一题</span>
+			</label>	
+		</div>
+		<div class="checkbox">
+			<input type="checkbox" class="radios"  id="checkbox3">	
+			<label for="checkbox3" class="label-img">
+				<img src="img/wrong.jpg" height="50" width="50" alt="">
+				<!-- 第一个标签必须是img别的随便 -->
+				<span>第一题</span>
+			</label>	
+		</div>
+		
+</body>
+	<script src="radio-and-checkbox.js"></script>
+	<script>
+	
+	var allRadios=document.getElementsByClassName("all-radios");
+	new allRadio({
+			allRadios:allRadios[0],
+			wrongMarkUrl:"img/wrong.jpg",
+			rightMarkUrl:"img/right.jpg",
+			type:"radio",
+			callback:function(){
+				console.log("向后台发数据");
+			}
+		});
+	new allRadio({
+			allRadios:allRadios[1],
+			wrongMarkUrl:"img/wrong.jpg",
+			rightMarkUrl:"img/right.jpg",
+			type:"radio",
+			callback:function(){
+				console.log("向后台发数据");
+			}
+		});
+	var checkbox=document.getElementsByClassName("checkbox");
+	new allRadio({
+			allRadios:checkbox[0],
+			wrongMarkUrl:"img/wrong.jpg",
+			rightMarkUrl:"img/right.jpg",
+			type:"checkbox",
+			callback:function(){
+				console.log("向后台发数据");
+			}
+		});
+	new allRadio({
+			allRadios:checkbox[1],
+			wrongMarkUrl:"img/wrong.jpg",
+			rightMarkUrl:"img/right.jpg",
+			type:"checkbox",
+			callback:function(){
+				console.log("向后台发数据");
+			}
+		});
+	new allRadio({
+			allRadios:checkbox[2],
+			wrongMarkUrl:"img/wrong.jpg",
+			rightMarkUrl:"img/right.jpg",
+			type:"checkbox",
+			callback:function(){
+				console.log("向后台发数据");
+			}
+		});
+	</script>
+</html>
